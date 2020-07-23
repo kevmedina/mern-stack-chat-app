@@ -8,7 +8,6 @@ import Signup from "./components/Auth/Signup/Signup";
 const App = () => {
   return (
     <div className="App">
-      <h1>Hello</h1>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/signup" component={Signup} />
