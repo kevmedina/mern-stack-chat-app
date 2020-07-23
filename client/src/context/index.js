@@ -34,7 +34,7 @@ const AuthProvider = (props) => {
   }, []);
 
   const handleSignupInput = (e) => {
-    const { name, value } = e;
+    const { name, value } = e.target;
     setSignupForm((prevState) => ({
       ...prevState,
       [name]: value,
@@ -65,7 +65,7 @@ const AuthProvider = (props) => {
   };
 
   const handleLoginInput = (e) => {
-    const { name, value } = e;
+    const { name, value } = e.target;
     setLoginForm((prevState) => ({
       ...prevState,
       [name]: value,
