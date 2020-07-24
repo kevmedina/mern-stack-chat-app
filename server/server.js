@@ -7,6 +7,7 @@ const favicon = require("serve-favicon");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
 
@@ -20,6 +21,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // make sure express- session is used before the passport
 // require("./configs/session.config")(app);
 require("./configs/passport/passport.config.js")(app);
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
 
 app.use(
   session({
