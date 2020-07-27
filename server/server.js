@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // make sure express- session is used before the passport
-// require("./configs/session.config")(app);
+require("./configs/session.config")(app);
 require("./configs/passport/passport.config.js")(app);
 require("./configs/db.config");
 
