@@ -9,19 +9,19 @@ const service = axios.create({
 
 const AUTH_SERVICE = {
   signup(userData) {
-    return service.post("/api/signup", userData);
+    return service.post("/signup", userData);
   },
 
   login(userData) {
-    return service.post("/api/login", userData);
+    return service.post("/login", userData);
   },
 
   logout() {
-    return service.post("/api/logout", {});
+    return service.post("/logout", {});
   },
 
   getUser() {
-    return service.get("/api/isLoggedIn");
+    return service.get("/isLoggedIn");
   },
 };
 
