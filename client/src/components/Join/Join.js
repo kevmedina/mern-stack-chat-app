@@ -16,7 +16,7 @@ const Join = () => {
         return (
           <div className="joinOuterContainer">
             <div className="joinInnerContainer">
-              <h1 className="heading">Join</h1>
+              <h1 className="heading">JOIN ROOM</h1>
               <div>
                 {/* <input
                   placeholder="Name"
@@ -28,7 +28,7 @@ const Join = () => {
               </div>
               <div>
                 <input
-                  placeholder="Room"
+                  placeholder="Enter the name of the room"
                   className="joinInput mt-20"
                   type="text"
                   onChange={(event) => setRoom(event.target.value)}
@@ -39,7 +39,7 @@ const Join = () => {
                 to={`/chat?name=${name}&room=${room}`}
               >
                 <button className={"button mt-20"} type="submit">
-                  Sign In
+                  Join Room
                 </button>
               </Link>
             </div>
