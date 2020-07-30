@@ -13,6 +13,7 @@ const Join = () => {
         const {
           currentUser: { username },
         } = context;
+        setName(username);
         return (
           <div className="joinOuterContainer">
             <div className="joinInnerContainer">
@@ -24,7 +25,7 @@ const Join = () => {
                   type="text"
                   onChange={(event) => setName(event.target.value)}
                 /> */}
-                <p className="name"> Welcome {username}</p>
+                <p className="name"> Welcome {name}</p>
               </div>
               <div>
                 <input
