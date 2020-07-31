@@ -13,7 +13,7 @@ const Join = () => {
         const {
           currentUser: { username },
         } = context;
-        setName(username);
+        // setName(username);
         return (
           <div className="joinOuterContainer">
             <div className="joinInnerContainer">
@@ -25,7 +25,7 @@ const Join = () => {
                   type="text"
                   onChange={(event) => setName(event.target.value)}
                 /> */}
-                <p className="name"> Welcome {name}</p>
+                <p className="name"> Welcome {username}</p>
               </div>
               <div>
                 <input
@@ -36,8 +36,10 @@ const Join = () => {
                 />
               </div>
               <Link
-                onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-                to={`/chat?name=${name}&room=${room}`}
+                onClick={(e) =>
+                  !username || !room ? e.preventDefault() : null
+                }
+                to={`/chat?name=${username}&room=${room}`}
               >
                 <button className={"button mt-20"} type="submit">
                   Join Room

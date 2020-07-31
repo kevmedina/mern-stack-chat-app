@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import queryString from "query-string";
+// import { AuthContext } from "../../context/index";
 import "./Chat.css";
 
-const Chat = () => {
-  return <div className="outerContainer">Hello</div>;
+const Chat = ({ location }) => {
+  const [name, setName] = useState("");
+  const [room, setRoom] = useState("");
+  const ENDPOINT = process.env.REACT_APP_SERVER_POINT;
+
+  useEffect(() => {
+    const { name, room } = queryString.parse(location.search);
+    setRoom(room);
+    setName(name);
+  }, [ENDPOINT, location.search]);
+
+  return (
+    <div>
+      Hello {name}, you have joined room {room}
+    </div>
+  );
 };
 
 export default Chat;
+
+// <AuthContext.Consumer>
+//   <div className="outerContainer">
+//     {(context) => {
+//       const {
+//         currentUser: { username },
+//       } = context;
+
+//       return (
+//       );
+//     }}
+//   </div>
+// </AuthContext.Consumer>
