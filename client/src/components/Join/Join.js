@@ -4,7 +4,7 @@ import { AuthContext } from "../../context/index";
 import "./Join.css";
 
 const Join = () => {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
   return (
