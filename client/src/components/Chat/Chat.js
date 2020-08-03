@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { withRouter } from "react-router-dom";
 import queryString from "query-string";
 // import { AuthContext } from "../../context/index";
 import "./Chat.css";
@@ -21,7 +22,7 @@ const Chat = ({ location }) => {
   );
 };
 
-export default Chat;
+export default withRouter(Chat);
 
 // <AuthContext.Consumer>
 //   <div className="outerContainer">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AUTH_SERVICE from "../services/AuthService";
+import { withRouter } from "react-router-dom";
 export const AuthContext = React.createContext();
 
 const AuthProvider = (props) => {
@@ -128,4 +129,4 @@ const AuthProvider = (props) => {
   );
 };
 
-export default AuthProvider;
+export default withRouter(AuthProvider);
